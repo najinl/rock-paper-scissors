@@ -1,8 +1,8 @@
 class Game {
   constructor(){
     this.gameType = null;
-    this.humanPlay = null;
-    this.computerPlay = null;
+    this.humanPlayer = new Player('Human', '🧍‍♀️');
+    this.computerPlayer = new Player('Computer', '🤖')
     this.humanWins = 0;
     this.computerWins = 0;
   }
@@ -14,15 +14,13 @@ class Game {
 // }
 
 determineWinner() {
-  // human = new Player('Human', '🧍‍♀️');
-  // computer = new Player('Computer', '🤖')
-  this.computerPlay = computer.takeTurn(3, 1)
-  this.humanPlay = human.takeTurn(3, 1)
-  if(this.computerPlay === 'rock' && this.humanPlay === 'scissors' || this.computerPlay === 'scissors' && this.humanPlay === 'paper' || this.computerPlay === 'paper' && this.humanPlay === 'rock') {
-    computer.wins++;
+  var computerPlay = this.computerPlayer.takeTurn(3, 1);
+  var humanPlay = this.humanPlayer.takeTurn(3,1);
+  if(computerPlay === 'rock' && humanPlay === 'scissors' || computerPlay === 'scissors' && humanPlay === 'paper' || computerPlay === 'paper' && humanPlay === 'rock') {
+    this.computerPlayer.wins++;
     return 'Computer won this round!';
-  } else if(this.humanPlay === 'rock' && this.computerPlay === 'scissors' || this.humanPlay === 'scissors' && this.computerPlay === 'paper' || this.humanPlay === 'paper' && this.computerPlay === 'rock') {
-    human.wins++;
+  } else if(humanPlay === 'rock' && computerPlay === 'scissors' || humanPlay === 'scissors' && computerPlay === 'paper' || humanPlay === 'paper' && computerPlay === 'rock') {
+    this.humanPlayer.wins++;
     return 'Human won this round!';
   } else {
     return "Ugh!t's a draw!"

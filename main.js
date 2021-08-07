@@ -1,9 +1,11 @@
-var game1;
+var newGame = new Game();
+var humanToken = document.querySelector('#humanScoreCard');
+var computerToken = document.querySelector('#computerScoreCard');
 
-function instanciate() {
-  human = new Player('Human', '🧍‍♀️', 10);
-  computer = new Player('Computer', '🤖', 13);
-  game1 = new Game();
+
+function populateScoreBoard() {
+  humanToken.innerText = newGame.humanPlayer.token;
+  computerToken.innerText = newGame.computerPlayer.token;
 }
 //--------------the long and non-class-to-class way to solve it!----------------
 // var humanWins = 0;
