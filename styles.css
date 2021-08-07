@@ -1,0 +1,52 @@
+body {
+  font-family: 'Russo One', sans-serif;
+  margin: 0px;
+}
+
+p {
+  font-size: 22px;
+  margin: 5px;
+}
+
+.main-page{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  max-height: 100%;
+  width: 100%;
+  color: #FFF;
+}
+
+.play-board {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-height: 100%;
+  width: 100%;
+  flex: 3;
+  padding-top: 50px;
+  font-size: 75px;
+  background-color: #ff42ff;
+  border: solid 2px green;
+}
+
+.score-card {
+  padding-top: 20px;
+  background-color:#ff75ff;
+  flex: 1;
+  font-size: 55px;
+}
+
+.game-option {
+  height: 180px;
+  width: 400px;
+  background-color: #db04db;
+  margin: 20px 0px 30px 0px;
+  padding-top: 30px;
+  font-size: 33px;
+  /* border: solid 2px black; */
+}
+
+#difficult{
+  height: 260px;
+}
