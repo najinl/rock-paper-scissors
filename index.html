@@ -1,23 +1,25 @@
 <html>
   <head>
     <link rel="stylesheet" href="./styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
     <title>Rock, Paper, Scissors</title>
   </head>
   <body>
     <section class="main-page"HELLO!>
-      <section class="score-card" id="humanScoreCard">🧕
-
+      <section class="score-card">
+        <section class="human-token">🧍‍</section>
+        <section class="human-name">Human</section>
+        <section class="human-score"></section>
       </section>
       <section class="play-board">Rock, Paper, Scissors
-        <section class="game-option" id="classic">🪨 CLASSIC ✂️
+        <button class="game-option" id="classic">🪨 CLASSIC ✂️
           <section class="classic-rules">
             <p>rock > scissors</p>
             <p>paper > rock</p>
             <p>scissors > paper</p>
           </section>
-        </section>
-        <section class="game-option" id="difficult">🦕 DIFFICULT 🦅
+        </button>
+        <button class="game-option" id="difficult">🦕 DIFFICULT 🦅
           <section class="difficult-rules">
             <p>rock > scissors & venusaur</p>
             <p>paper > rock & fletchinder</p>
@@ -25,12 +27,26 @@
             <p>venusaur > paper & fletchinder</p>
             <p>fletchinder > scissors & rock</p>
           </section>
+        </button>
+        <section class="full-character-lineup hidden">
+          <form class="game-characters">
+            <button class="characters" id="rock"></button>
+            <button class="characters" id="paper"></button>
+            <button class="characters" id="scissors"></button>
+            <span class="difficult-mode hidden">
+              <button class="characters" id="venusaur"></button>
+              <button class="characters" id="fletchinder"></button>
+            </span>
         </section>
       </section>
-      <section class="score-card" id="computerScoreCard">💻
+      <section class="score-card" id="computerScoreCard">
+        <section class="computer-token">🤖</section>
+        <section class="computer-name">Machine</section>
+        <section class="computer-score"></section>
       </section>
     </section>
   </body>
+  <script src="data.js"></script>
   <script src="player.js"></script>
   <script src="game.js"></script>
   <script src="main.js"></script>
