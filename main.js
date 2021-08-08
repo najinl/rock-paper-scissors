@@ -8,7 +8,9 @@ var computerScore = document.querySelector('.computer-score');
 var classicOption = document.getElementById('classic');
 var difficultOption = document.getElementById('difficult');
 var gameCharacters = document.getElementsByClassName('characters');
-var difficultMode = document.querySelector('.difficult-mode')
+var difficultMode = document.querySelector('.difficult-mode');
+var allCharacters = document.querySelector('.full-character-lineup');
+
 
 window.addEventListener('load', function(){
   populateScoreBoard();
@@ -25,6 +27,7 @@ difficultOption.addEventListener('click', function(event){
 function chooseGameMode(mode) {
   addHidden(difficultOption, 'hidden');
   addHidden(classicOption, 'hidden');
+  removeHidden(allCharacters,'hidden');
   if(mode === 'difficult') {
     removeHidden(difficultMode, 'hidden');
   };

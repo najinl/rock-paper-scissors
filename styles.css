@@ -8,11 +8,15 @@ p {
   margin: 5px;
 }
 
+button {
+  border: none;
+}
+
 .main-page{
   display: flex;
   justify-content: center;
   text-align: center;
-  max-height: 100%;
+  min-height: 95vh;
   width: 100%;
   color: #FFF;
 }
@@ -21,13 +25,13 @@ p {
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-height: 100vh;
+  min-height: 95vh;
   width: 100%;
   flex: 3;
   padding-top: 50px;
   font-size: 75px;
   background-color: #ff42ff;
-  border: solid 2px green;
+  /* border: solid 2px green; */
 }
 
 .score-card {
@@ -47,12 +51,63 @@ p {
   margin: 20px 0px 30px 0px;
   padding-top: 30px;
   font-size: 33px;
-  /* border: solid 2px black; */
+  color: #FFF;
 }
 
-.hidden {
-  display: none !important;
+.full-character-lineup {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: center;
+  height: 500px;
+  width: 800px;
+  /* border: 2px solid green; */
 }
+
+.game-characters {
+  /* display: flex;
+  flex-direction: row;
+  justify-content: center; */
+  /* height: 500px;
+  width: 900px;
+  border: 2px solid green; */
+  margin: 20px 0px 30px 0px;
+  padding-top: 30px;
+  font-size: 33px;
+}
+
+.characters {
+  height: 200px;
+  width: 200px;
+  background-size: 100%;
+  background-color: #ff42ff;
+  margin:20px 10px 40px 0px;
+  /* mix-blend-mode: multiply; */
+}
+
 #difficult{
   height: 260px;
+}
+
+#rock {
+  background-image: url("./assets/happy-rocks.png");
+}
+
+#paper {
+  background-image: url("./assets/black-and-white-paper.png");
+}
+
+#scissors {
+  background-image: url("./assets/happy-scissors.png");
+}
+
+#venusaur {
+  background-image: url("./assets/evolution-3-venusaur.png");
+}
+
+#fletchinder {
+  background-image: url("./assets/evolution-2-fletchinder.png");
+}
+.hidden {
+  display: none !important;
 }
