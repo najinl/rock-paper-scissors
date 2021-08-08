@@ -1,35 +1,43 @@
 class Game {
   constructor(){
     this.gameType = null;
-    this.humanPlayer = new Player('Human', '🧍‍♀️');
-    this.computerPlayer = new Player('Computer', '🤖')
-    this.humanWins = 0;
-    this.computerWins = 0;
+    this.humanPlayer = new Player('Sarah', '🧕');
+    this.computerPlayer = new Player('Computer', '💻')
+    this.playerChoices = [];
+    this.winner = null;
+    this.draw = false;
   }
 
-// checkForDraw() {
-//   if(this.humanPlay === this.computerPlay) {
-//     return
-//   }
-// }
+startGame(mode) {
+  this.gameType = mode;
+  console.log(mode);
+  if(this.gameType === 'classic') {
+    this.playerChoices = classicCharacters;
+  } else {
+    console.log(difficultCharacters);
+    this.playerChoices = difficultCharacters;
+  }
+  this.generateComputerPlay();
+}
+
+generateComputerPlay(){
+var randomIndex = Math.floor(Math.random() * this.playerChoices.length)
+console.log('Computer choice: ', this.playerChoices[randomIndex])
+this.computerPlayer.takeTurn(this.playerChoices[randomIndex])
+};
 
 determineWinner() {
-  var computerPlay = this.computerPlayer.takeTurn(3, 1);
-  var humanPlay = this.humanPlayer.takeTurn(3,1);
-  if(computerPlay === 'rock' && humanPlay === 'scissors' || computerPlay === 'scissors' && humanPlay === 'paper' || computerPlay === 'paper' && humanPlay === 'rock') {
+  if(this.computerPlayer.playChoice.winAgainst.includes(this.humanPlayer.playChoice)) {
+    console.log('Computer won');
     this.computerPlayer.wins++;
-    return 'Computer won this round!';
-  } else if(humanPlay === 'rock' && computerPlay === 'scissors' || humanPlay === 'scissors' && computerPlay === 'paper' || humanPlay === 'paper' && computerPlay === 'rock') {
+    this.winner = this.computerPlayer;
+  } else if(this.computerPlayer.playChoice.loseAgainst.includes(this.humanPlayer.playChoice)) {
+    console.log('Human won this round!');
     this.humanPlayer.wins++;
-    return 'Human won this round!';
+    this.winner = this.humanPlayer;
   } else {
-    return "Ugh!t's a draw!"
+    console.log("Ugh!t's a draw!");
+    this.draw = true;
   }
-  //might be able to get rid of the conditional portion of else if and replase with just else return...
 }
-
-resetGameBoard() {
-
-}
-
 }

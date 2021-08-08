@@ -4,6 +4,7 @@ class Player {
     this.name = name;
     this.token = token;
     this.wins = 0;
+    this.playChoice = null;
   }
 
   saveWinsToStorage() {
@@ -14,15 +15,7 @@ class Player {
 
   }
 
-  takeTurn(max, min) {
-    var playChosen = Math.floor(Math.random() * (max - min + 1) + min);
-    if(playChosen === 1) {
-      playChosen = 'rock';
-    } else if(playChosen === 2) {
-      playChosen = 'paper';
-    } else {
-      playChosen = 'scissors';
-    }
-    return playChosen;
+  takeTurn(playerChoices) {
+  this.playChoice = playerChoices;
   }
 }
