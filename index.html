@@ -8,7 +8,7 @@
     <section class="main-page"HELLO!>
       <section class="score-card">
         <section class="human-token">🧍‍</section>
-        <section class="human-name">Human</section>
+        <section class="human-name"></section>
         <section class="human-score"></section>
       </section>
       <section class="play-board">Rock, Paper, Scissors
@@ -30,13 +30,16 @@
         </button>
         <section class="full-character-lineup hidden">
           <form class="game-characters">
-            <button class="characters" id="rock"></button>
-            <button class="characters" id="paper"></button>
-            <button class="characters" id="scissors"></button>
+            <button name="fighter" class="characters rock" id="rock"></button>
+            <button name="fighter" class="characters paper" id="paper"></button>
+            <button name="fighter" class="characters scissors" id="scissors"></button>
             <span class="difficult-mode hidden">
-              <button class="characters" id="venusaur"></button>
-              <button class="characters" id="fletchinder"></button>
+              <button name="fighter" class="characters venusaur" id="venusaur"></button>
+              <button name="fighter" class="characters fletchinder" id="fletchinder"></button>
             </span>
+          </form>
+          <div class="choice-human characters hidden"></div>
+          <div class="choice-computer characters hidden"></div>
         </section>
       </section>
       <section class="score-card" id="computerScoreCard">
