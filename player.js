@@ -7,12 +7,15 @@ class Player {
     this.playChoice = null;
   }
 
-  saveWinsToStorage() {
-
+  saveWinsToStorage(player, storageName) {
+    var winsToAdd = JSON.stringify(player);
+    localStorage.setItem(storageName, winsToAdd);
   }
 
-  retrieveWinsFromStorage() {
-
+  retrieveWinsFromStorage(storageName) {
+    var retrievedWins = localStorage.getItem(storageName) || 0;
+    var parsedWins = JSON.parse(retrievedWins);
+    this.wins = parseInt(parsedWins);
   }
 
   takeTurn(playerChoices) {

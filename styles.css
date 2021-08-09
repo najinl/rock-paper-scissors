@@ -89,23 +89,23 @@ button {
   height: 260px;
 }
 
-#rock {
+.rock {
   background-image: url("./assets/happy-rocks.png");
 }
 
-#paper {
+.paper {
   background-image: url("./assets/black-and-white-paper.png");
 }
 
-#scissors {
+.scissors {
   background-image: url("./assets/happy-scissors.png");
 }
 
-#venusaur {
+.venusaur {
   background-image: url("./assets/evolution-3-venusaur.png");
 }
 
-#fletchinder {
+.fletchinder {
   background-image: url("./assets/evolution-2-fletchinder.png");
 }
 .hidden {
