@@ -26,7 +26,7 @@ The goals of this project were to:
 ## Code Architecture
 - The application's data model consist of four .js files.
 
-  **player.js:** this is the class constructor for both the computer player and the human player. It includes only three methods, one that allows a player to take a      turn and assigns to that turn to the playChoice property, another that saves the win tally for a player to local storage and another to retrieve those play          wins.
+  1. **player.js:** this is the class constructor for both the computer player and the human player. It includes only three methods, one that allows a player to take a      turn and assigns to that turn to the playChoice property, another that saves the win tally for a player to local storage and another to retrieve those play          wins.
 
 
 ## Web App Attributes
