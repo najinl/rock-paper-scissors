@@ -13,7 +13,6 @@ class Game {
     if(this.gameType === 'classic') {
       this.playerChoices = classicCharacters;
     } else {
-      console.log(difficultCharacters);
       this.playerChoices = difficultCharacters;
     }
     this.generateComputerPlay();

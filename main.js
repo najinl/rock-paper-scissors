@@ -72,13 +72,17 @@ function addCharacterOptions() {
     gameCharacters[i].addEventListener('click', function(event) {
       event.preventDefault();
       newGame.humanPlayer.takeTurn(event.target.id);
-      newGame.determineWinner();
-      generateWinnerMessage(newGame);
-      resetGameBoard();
-      showPlayerChoices();
-      removeClass(changeGameButton, 'hidden');
+      showSelectedAndDeclareWinner();
     })
   }
+};
+
+function showSelectedAndDeclareWinner() {
+  newGame.determineWinner();
+  generateWinnerMessage(newGame);
+  resetGameBoard();
+  showPlayerChoices();
+  removeClass(changeGameButton, 'hidden');
 };
 
 function resetGameBoard() {
