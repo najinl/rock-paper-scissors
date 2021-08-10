@@ -15,10 +15,8 @@ var difficultMode = document.querySelector('.difficult-mode');
 var allCharacters = document.querySelector('.full-character-lineup');
 var computerSelection = document.querySelector('.choice-computer');
 var humanSelection = document.querySelector('.choice-human');
-var computerSelection = document.querySelector('.choice-computer');
 var changeGameButton = document.querySelector('.change-game');
 var playerPrompt = document.querySelector('.player-prompt');
-
 
 window.addEventListener('load', function(){
   newGame.humanPlayer.retrieveWinsFromStorage('humanWins');
@@ -56,14 +54,8 @@ function showPlayerChoices() {
   addClass(fighterRoster, 'hidden');
   removeClass(humanSelection, 'hidden');
   removeClass(computerSelection, 'hidden');
-  addClass(humanSelection, classAddForHuman);
-  addClass(computerSelection, classAddForComputer);
+  addPlayerChoices();
 };
-
-function removePlayerChoices() {
-  removeClass(humanSelection, classAddForHuman);
-  removeClass(computerSelection, classAddForComputer);
-}
 
 function generateWinnerMessage(winner) {
   if(winner.winner === winner.computerPlayer) {
@@ -73,7 +65,7 @@ function generateWinnerMessage(winner) {
   } else {
     playerPrompt.innerText = "😥 Ugh!t's a draw! 😥";
   }
-}
+};
 
 function addCharacterOptions() {
   for(var i = 0; i < gameCharacters.length; i++) {
@@ -82,7 +74,6 @@ function addCharacterOptions() {
       newGame.humanPlayer.takeTurn(event.target.id);
       newGame.determineWinner();
       generateWinnerMessage(newGame);
-      console.log('Winner:', newGame.winner);
       resetGameBoard();
       showPlayerChoices();
       removeClass(changeGameButton, 'hidden');
@@ -92,11 +83,10 @@ function addCharacterOptions() {
 
 function resetGameBoard() {
   setTimeout(function(){
+    var mode = newGame.gameType
     addClass(humanSelection, 'hidden');
     addClass(computerSelection, 'hidden');
     removePlayerChoices();
-    console.log('timeout')
-    var mode = newGame.gameType
     newGame.startGame(mode)
     humanScore.innerText = `Wins: ${newGame.humanPlayer.wins}`;
     computerScore.innerText = `Wins: ${newGame.computerPlayer.wins}`;
@@ -109,8 +99,6 @@ function resetGameBoard() {
 };
 
 function populateScoreBoard() {
-  // newGame = new Game();
-  console.log(newGame);
   humanToken.innerText = newGame.humanPlayer.token;
   humanName.innerText = newGame.humanPlayer.name;
   humanScore.innerText = `Wins: ${newGame.humanPlayer.wins}`;
@@ -125,4 +113,14 @@ function addClass(element, classList) {
 
 function removeClass(element, classList) {
   element.classList.remove(classList);
+};
+
+function removePlayerChoices() {
+  removeClass(humanSelection, classAddForHuman);
+  removeClass(computerSelection, classAddForComputer);
+};
+
+function addPlayerChoices() {
+  addClass(humanSelection, classAddForHuman);
+  addClass(computerSelection, classAddForComputer);
 };

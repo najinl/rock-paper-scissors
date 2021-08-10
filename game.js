@@ -10,7 +10,6 @@ class Game {
 
   startGame(mode) {
     this.gameType = mode;
-    console.log(mode);
     if(this.gameType === 'classic') {
       this.playerChoices = classicCharacters;
     } else {
@@ -21,27 +20,22 @@ class Game {
   }
 
   generateComputerPlay(){
-  var randomIndex = Math.floor(Math.random() * this.playerChoices.length)
-  console.log('Computer choice: ', this.playerChoices[randomIndex])
-    this.computerPlayer.takeTurn(this.playerChoices[randomIndex])
+  var randomIndex = Math.floor(Math.random() * this.playerChoices.length);
+    this.computerPlayer.takeTurn(this.playerChoices[randomIndex]);
   };
 
   determineWinner() {
     if(this.computerPlayer.playChoice.winAgainst.includes(this.humanPlayer.playChoice)) {
-      console.log('Computer won');
       this.computerPlayer.wins++;
       this.winner = this.computerPlayer;
     } else if(this.computerPlayer.playChoice.loseAgainst.includes(this.humanPlayer.playChoice)) {
-      console.log('Human won this round!');
       this.humanPlayer.wins++;
       this.winner = this.humanPlayer;
     } else {
-      console.log("Ugh!t's a draw!");
       this.draw = true;
       this.winner = 'none';
     }
     this.humanPlayer.saveWinsToStorage(this.humanPlayer.wins, 'humanWins');
-    this.computerPlayer.saveWinsToStorage(this.computerPlayer.wins, 'computerWins')
+    this.computerPlayer.saveWinsToStorage(this.computerPlayer.wins, 'computerWins');
   }
-
 }

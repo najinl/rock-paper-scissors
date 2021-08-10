@@ -102,7 +102,6 @@ button {
 .full-character-lineup {
   display: flex;
   flex-direction: row;
-  /* align-items: stretch; */
   align-items: center;
   justify-content: center;
   height: 500px;
