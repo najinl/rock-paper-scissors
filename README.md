@@ -1,4 +1,4 @@
-# Rock, Paper, Scissors (Group Project)
+# Rock, Paper, Scissors (Solo Mod-1 Final Project)
 
 ## Project Repo
 https://github.com/najinl/rock-paper-scissors
