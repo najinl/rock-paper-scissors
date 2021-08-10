@@ -25,12 +25,12 @@ The goals of this project were to:
 
 ## Web App Attributes
 - User is greated swith a home screen, which shows their user token, name, and a beginning score of 0 wins on the right hand side of the page. The middle of the page has a prompt for the user to select a game mode: classic or difficult. When the user hovers over the game mode, it will be highlighted in white and the text will turn dark pink.
-- 
+
 ![image](https://user-images.githubusercontent.com/68795578/128896137-95e9dd8d-5fe8-4de9-a43f-ad00dd9f4480.png)
 <img width="1428" alt="Screen Shot 2021-08-10 at 9 58 47 AM" src="https://user-images.githubusercontent.com/68795578/128896331-020f0e40-6ddf-43a8-ab70-d574fa1516a4.png">
 
 - Once user selects a game mode, the gameboard section will be populated with fighter (or character) choices for the human to play. The prompt for choosing a game mode will change to "choose your fighter". The human can see that they are able to select their choice of fighter by clicking the fighter image, because when they hover over fighters their cursor turns into a hand. Once the the human selects their fighter the gameboard screen will change to only show their fighter selection and the computer's fighter selection side by side (adjacent to the player card who selected them). Additionally, a button under the human player win value on the left side of the screen will appear that allows the player to change game modes. The prompt for the player to "choose your fighter" will change to indicate who won the round or if it was a tie.
-- 
+
 ![image](https://user-images.githubusercontent.com/68795578/128896720-b86c6ea7-a006-4fd7-ba3e-9c7b9a5704a1.png)
 ![Draw](https://user-images.githubusercontent.com/68795578/128900133-69d9538d-0381-438d-9dc5-e53e3bbcce18.png)
 ![image](https://user-images.githubusercontent.com/68795578/128897641-919c0d15-be6b-4456-b0db-6d588477780e.png)
