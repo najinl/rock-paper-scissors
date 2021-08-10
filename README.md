@@ -24,8 +24,11 @@ The goals of this project were to:
 - Display an understanding of the difference       between the Data Model and the DOM.  
 
 ## Web App Attributes
-- Allow user to choose between 3 categories
-<img width="1438" alt="Screen Shot 2021-08-03 at 8 04 08 PM" src="https://user-images.githubusercontent.com/39206140/128110933-a1933cd4-1c5b-4820-8e49-e1e86dd90589.png">
+- User is greated swith a home screen, which shows their user token, name, and a beginning score of 0 wins on the right hand side of the page. The middle of the page has a prompt for the user to select a game mode: classic or difficult. When the user hovers over the game mode, it will be highlighted in white and the text will turn dark pink.
+![image](https://user-images.githubusercontent.com/68795578/128896137-95e9dd8d-5fe8-4de9-a43f-ad00dd9f4480.png)
+<img width="1428" alt="Screen Shot 2021-08-10 at 9 58 47 AM" src="https://user-images.githubusercontent.com/68795578/128896331-020f0e40-6ddf-43a8-ab70-d574fa1516a4.png">
+
+
 
 - Allow user to input text into a single field of their preference
 <img width="1438" alt="Screen Shot 2021-08-03 at 8 05 53 PM" src="https://user-images.githubusercontent.com/39206140/128110975-98b1e615-e2fe-4905-9c8b-93ccc2774e6b.png">
