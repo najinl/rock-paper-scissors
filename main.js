@@ -16,6 +16,8 @@ var allCharacters = document.querySelector('.full-character-lineup');
 var computerSelection = document.querySelector('.choice-computer');
 var humanSelection = document.querySelector('.choice-human');
 var computerSelection = document.querySelector('.choice-computer');
+var changeGameButton = document.querySelector('.change-game');
+var playerPrompt = document.querySelector('.player-prompt');
 
 
 window.addEventListener('load', function(){
@@ -24,11 +26,15 @@ window.addEventListener('load', function(){
   populateScoreBoard();
 });
 
-classicOption.addEventListener('click', function(event){
+changeGameButton.addEventListener('click', function() {
+location.reload();
+});
+
+classicOption.addEventListener('click', function(event) {
 chooseGameMode('classic')
 });
 
-difficultOption.addEventListener('click', function(event){
+difficultOption.addEventListener('click', function(event) {
   chooseGameMode('difficult');
 });
 
@@ -40,6 +46,7 @@ function chooseGameMode(mode) {
     removeClass(difficultMode, 'hidden');
   };
   newGame.startGame(mode);
+  playerPrompt.innerText = 'Choose your fighter!';
   addCharacterOptions();
 };
 
@@ -58,16 +65,27 @@ function removePlayerChoices() {
   removeClass(computerSelection, classAddForComputer);
 }
 
+function generateWinnerMessage(winner) {
+  if(winner.winner === winner.computerPlayer) {
+    playerPrompt.innerText = `${winner.computerPlayer.token} ${winner.computerPlayer.name} won this round! ${winner.computerPlayer.token}`;
+  } else if(winner.winner === winner.humanPlayer) {
+    playerPrompt.innerText = `${winner.humanPlayer.token} ${winner.humanPlayer.name} won this round! ${winner.humanPlayer.token}`;
+  } else {
+    playerPrompt.innerText = "😥 Ugh!t's a draw! 😥";
+  }
+}
+
 function addCharacterOptions() {
   for(var i = 0; i < gameCharacters.length; i++) {
     gameCharacters[i].addEventListener('click', function(event) {
       event.preventDefault();
       newGame.humanPlayer.takeTurn(event.target.id);
       newGame.determineWinner();
-
+      generateWinnerMessage(newGame);
+      console.log('Winner:', newGame.winner);
       resetGameBoard();
-      // humanPlayerChoiceDisplay = event.target;
       showPlayerChoices();
+      removeClass(changeGameButton, 'hidden');
     })
   }
 };
@@ -77,13 +95,12 @@ function resetGameBoard() {
     addClass(humanSelection, 'hidden');
     addClass(computerSelection, 'hidden');
     removePlayerChoices();
-    //all the things you want to do to reset the game board
     console.log('timeout')
-    humanScore.innerText = `Wins: ${newGame.humanPlayer.wins}`;
-    computerScore.innerText = `Wins: ${newGame.computerPlayer.wins}`;
     var mode = newGame.gameType
     newGame.startGame(mode)
-    // removeClass(allCharacters,'hidden');
+    humanScore.innerText = `Wins: ${newGame.humanPlayer.wins}`;
+    computerScore.innerText = `Wins: ${newGame.computerPlayer.wins}`;
+    playerPrompt.innerText = 'Choose your fighter!';
     removeClass(fighterRoster, 'hidden')
     if(mode === 'difficult') {
       removeClass(difficultMode, 'hidden');
@@ -97,12 +114,10 @@ function populateScoreBoard() {
   humanToken.innerText = newGame.humanPlayer.token;
   humanName.innerText = newGame.humanPlayer.name;
   humanScore.innerText = `Wins: ${newGame.humanPlayer.wins}`;
-
   computerToken.innerText = newGame.computerPlayer.token;
   computerName.innerText = newGame.computerPlayer.name;
   computerScore.innerText = `Wins: ${newGame.computerPlayer.wins}`;
 };
-
 
 function addClass(element, classList) {
   element.classList.add(classList);

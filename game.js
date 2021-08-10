@@ -5,7 +5,7 @@ class Game {
     this.computerPlayer = new Player('Computer', '💻')
     this.playerChoices = [];
     this.winner = null;
-    this.draw = false;
+    this.draw = null;
   }
 
   startGame(mode) {
@@ -38,8 +38,10 @@ class Game {
     } else {
       console.log("Ugh!t's a draw!");
       this.draw = true;
+      this.winner = 'none';
     }
     this.humanPlayer.saveWinsToStorage(this.humanPlayer.wins, 'humanWins');
     this.computerPlayer.saveWinsToStorage(this.computerPlayer.wins, 'computerWins')
   }
+
 }

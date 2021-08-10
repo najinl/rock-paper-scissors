@@ -1,6 +1,7 @@
 body {
   font-family: 'Ubuntu', sans-serif;
   margin: 0px;
+  font-weight: 700;
 }
 
 p {
@@ -10,13 +11,28 @@ p {
 
 button {
   border: none;
+  cursor: pointer;
+}
+
+.score-card button:hover {
+  background-color: #FFF;
+  color: #db04db;
+}
+
+.play-board button:hover {
+  background-color: #FFF;
+  color: #db04db;
+}
+
+.game-characters button:hover {
+  background-color: #ff42ff;
 }
 
 .main-page{
   display: flex;
   justify-content: center;
   text-align: center;
-  min-height: 95vh;
+  min-height: 98vh;
   width: 100%;
   color: #FFF;
 }
@@ -25,13 +41,12 @@ button {
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-height: 95vh;
+  min-height: 98vh;
   width: 100%;
-  flex: 3;
-  padding-top: 50px;
+  flex: 4;
+  padding-top: 20px;
   font-size: 75px;
   background-color: #ff42ff;
-  /* border: solid 2px green; */
 }
 
 .score-card {
@@ -41,15 +56,45 @@ button {
   display: flex;
   flex-direction: column;
   align-items: center;
+  font-size: 30px;
+  font-weight: 500;
+}
+
+.player-prompt {
+  padding-top: 13px;
+  font-size: 28px;
+  font-weight: 300;
+}
+
+.token {
   font-size: 55px;
 }
 
+.name {
+  font-size: 28px;
+  padding-bottom: 30px;
+  font-weight: 300;
+}
+
+.score {
+  font-size: 22px;
+  font-weight: 100;
+}
+
+.change-game {
+  margin-top: 70px;
+  font-size: 15px;
+  color: #FFF;
+  height: 46px;
+  width: 160px;
+  background-color: #db04db;
+}
 .game-option {
-  height: 180px;
+  height: 200px;
   width: 400px;
   background-color: #db04db;
   margin: 20px 0px 30px 0px;
-  padding-top: 30px;
+  padding-top: 10px;
   font-size: 33px;
   color: #FFF;
 }
@@ -57,20 +102,14 @@ button {
 .full-character-lineup {
   display: flex;
   flex-direction: row;
-  align-items: stretch;
+  /* align-items: stretch; */
+  align-items: center;
   justify-content: center;
   height: 500px;
   width: 800px;
-  /* border: 2px solid green; */
 }
 
 .game-characters {
-  /* display: flex;
-  flex-direction: row;
-  justify-content: center; */
-  /* height: 500px;
-  width: 900px;
-  border: 2px solid green; */
   margin: 20px 0px 30px 0px;
   padding-top: 30px;
   font-size: 33px;
@@ -82,7 +121,6 @@ button {
   background-size: 100%;
   background-color: #ff42ff;
   margin:20px 10px 40px 0px;
-  /* mix-blend-mode: multiply; */
 }
 
 #difficult{
