@@ -30,22 +30,13 @@ The goals of this project were to:
 
 - Once user selects a game mode, the gameboard section will be populated with fighter (or character) choices for the human to play. The prompt for choosing a game mode will change to "choose your fighter". The human can see that they are able to select their choice of fighter by clicking the fighter image, because when they hover over fighters their cursor turns into a hand. Once the the human selects their fighter the gameboard screen will change to only show their fighter selection and the computer's fighter selection side by side (adjacent to the player card who selected them). Additionally, a button under the human player win value on the left side of the screen will appear that allows the player to change game modes. The prompt for the player to "choose your fighter" will change to indicate who won the round or if it was a tie.
 ![image](https://user-images.githubusercontent.com/68795578/128896720-b86c6ea7-a006-4fd7-ba3e-9c7b9a5704a1.png)
-![image](https://user-images.githubusercontent.com/68795578/128897641-919c0d15-be6b-4456-b0db-6d588477780e.png)
 ![Draw](https://user-images.githubusercontent.com/68795578/128900133-69d9538d-0381-438d-9dc5-e53e3bbcce18.png)
+![image](https://user-images.githubusercontent.com/68795578/128897641-919c0d15-be6b-4456-b0db-6d588477780e.png)
 ![Computer Win](https://user-images.githubusercontent.com/68795578/128900163-90f3028c-b3e3-4a7b-b0be-c95ac41db85b.png)
 
-- Allow user to input a time in minutes and seconds
-<img width="1439" alt="Screen Shot 2021-08-03 at 8 06 02 PM" src="https://user-images.githubusercontent.com/39206140/128111100-8a8b6bb7-6b94-4235-aae7-bdfc35315385.png">
-
-- User will see a visual representation of a timer and will be congratulated when timer hits 0.
-<img width="1437" alt="Screen Shot 2021-08-03 at 8 06 29 PM" src="https://user-images.githubusercontent.com/39206140/128111164-379d0230-edcb-4730-b66b-9f6292ec655a.png">
-
-- User will be allowed to set a new activity and goal.
-<img width="1424" alt="Screen Shot 2021-08-03 at 8 06 38 PM" src="https://user-images.githubusercontent.com/39206140/128111228-89eaee68-c211-466b-ae57-32c93d5d1268.png">
-
-- User will see a visual representation of activities they have created represented by cards.
-<img width="1435" alt="Screen Shot 2021-08-03 at 8 08 15 PM" src="https://user-images.githubusercontent.com/39206140/128111274-014fba44-da66-46a6-a4a9-75959177baae.png">
-
+- Once the player clicks the "Change Game?" button, they will be taken back to the home screen where they are again prompted to "Choose your game!". If difficult mode is selected, then the player selection is then updated with not three, BUT FIVE fighter options for the human to player to select from. The computer and human selections will show side by side, just the same as they did in classic mode, after the human play is selected. Best part of all of this is that the game wins will carry from game mode to game mode no matter how many times the player switches modes (God bless you local storage).
+<img width="1425" alt="Screen Shot 2021-08-10 at 10 48 08 AM" src="https://user-images.githubusercontent.com/68795578/128900574-f965557e-23b3-418a-a119-310db71f222f.png">
+<img width="1416" alt="Screen Shot 2021-08-10 at 10 47 50 AM" src="https://user-images.githubusercontent.com/68795578/128900523-ad2cab9b-3a12-408e-be4c-403c1019e932.png">
 
 
 ## Contributors
