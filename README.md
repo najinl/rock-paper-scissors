@@ -34,14 +34,14 @@ The goals of this project were to:
   
   **main.js:** this file contains an instanciation of a the game class called newGame, which allows the main.js file to have access to all of the methods within          both the player.js and game.js files. There are 16 global variables that serve as query selectors within this file. Two global variables, classAddForHuman and      classAddForComputer, are utilized to update the DOM with only the image of the fighter that the human and computer chose during each round right before the          time out happens and the gameboard is reset. There are two helper functions used within the file--one for adding classes and one for removing classes.              Additionally, there are two wrapper functions that encase these helper functions. The remainder of functions within the file are used to update the DOM with        messages to the player and/or resetting the gameboard.
   
-##Challenges
+## Challenges
 - Embedded img tags seemed to not do so great when it came to sizing them, so I ended up embedding the fighters/characters as background-image url's. I consider this a challenge, because I'm not sure that it is appropriate to do so and then just stick an "alt" within the button element and this still be considered semantic and/or appropriate for visually impaired users.
 
 - Feel like the rubric requiring us to put the saveWinsToStorage and retrieveWinsFromStorage lead to me utilizing a lot of chaining within the main.js file within on load event listener...didn't know what else to do though.
 
 - Even though I refactored the addCharacterOptions function by clumping a lot of functions into the wrapper showSelectedAndDeclareWinner...I still have heartache about the wrapper maybe doing too many things at once? Again, at a loss for a better way.
 
-##Wins
+## Wins
 - I was really proud of the data.js file's arrays and how this made the logic behind determining a winner so much cleaner!
 - I'm proud of my addClass and removeClass helpers. Although I know it is a simple function, I wanted to do something like this in intention timer...but got too far down the path to implement it later on. Just happy I did it here😆
 
