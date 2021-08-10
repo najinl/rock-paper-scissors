@@ -21,7 +21,12 @@ The goals of this project were to:
 - Demonstrate an understanding of local storage to persist data
 - Utilize DRY JavaScript
 - Employ event delegation
-- Display an understanding of the difference       between the Data Model and the DOM.  
+- Display an understanding of the difference between the Data Model and the DOM.  
+
+## Code Architecture
+- The application's data model consist of four .js files.
+  1. player.js: this is the class constructor for both the computer player and the human player. It includes only three methods, one that allows a player to take a      turn and assigns to that turn to the playChoice property, another that saves the win tally for a player to local storage and another to retrieve those play          wins.
+
 
 ## Web App Attributes
 - User is greated swith a home screen, which shows their user token, name, and a beginning score of 0 wins on the right hand side of the page. The middle of the page has a prompt for the user to select a game mode: classic or difficult. When the user hovers over the game mode, it will be highlighted in white and the text will turn dark pink.
