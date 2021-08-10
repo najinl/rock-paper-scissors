@@ -28,10 +28,9 @@ The goals of this project were to:
 ![image](https://user-images.githubusercontent.com/68795578/128896137-95e9dd8d-5fe8-4de9-a43f-ad00dd9f4480.png)
 <img width="1428" alt="Screen Shot 2021-08-10 at 9 58 47 AM" src="https://user-images.githubusercontent.com/68795578/128896331-020f0e40-6ddf-43a8-ab70-d574fa1516a4.png">
 
+- Once user selects a game mode, the gameboard section will be populated with fighter (or character) choices for the human to play. The prompt for choosing a game mode will change to "choose a fighter"
+![image](https://user-images.githubusercontent.com/68795578/128896720-b86c6ea7-a006-4fd7-ba3e-9c7b9a5704a1.png)
 
-
-- Allow user to input text into a single field of their preference
-<img width="1438" alt="Screen Shot 2021-08-03 at 8 05 53 PM" src="https://user-images.githubusercontent.com/39206140/128110975-98b1e615-e2fe-4905-9c8b-93ccc2774e6b.png">
 
 - Allow user to input a time in minutes and seconds
 <img width="1439" alt="Screen Shot 2021-08-03 at 8 06 02 PM" src="https://user-images.githubusercontent.com/39206140/128111100-8a8b6bb7-6b94-4235-aae7-bdfc35315385.png">
